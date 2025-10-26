@@ -28,8 +28,9 @@
 - `products` - товары
 - `clients` - клиенты
 - `orders` - заказы
-- `order_items` - детали заказа
+- `order_items` - детали заказа (связующая таблица, реализующая отношения многие-ко-многим)
 
+<img width="990" height="517" alt="Diagramm" src="https://github.com/user-attachments/assets/4588bf3a-cbdf-473d-bb76-6f372e6fed93" />
 
 ---
 
