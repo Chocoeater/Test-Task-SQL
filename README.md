@@ -35,7 +35,7 @@
 
 ## Проверка
 
-1. Запускам БД (например, PostgreSQL) через Docker:
+1. Запускам БД (PostgreSQL) через Docker:
 ```bash
 docker run --name testdb -e POSTGRES_PASSWORD=1234 -p 5432:5432 -d postgres
 ```
@@ -45,13 +45,9 @@ psql -h localhost -U postgres -c "CREATE DATABASE testtask;"
 ```
 3. Выполняем скрипт по созданию таблиц:
 ```bash
-psql -h localhost -U postgres -d testtask -fschema.sql
+psql -h localhost -U postgres -d testtask -f schema.sql
 ```
 4. Наполняем таблицы тестовыми данными:
-```bash
-psql -h localhost -U postgres -d testtask -f testdata.sql
-```
+   - На windows возникают проблемы с кодировкой, поэтому пользуемся PGAdmin и через QueryTool копируем содержимое файла testdata.sql и запускаем.
 5. Выполняем запросы:
-```bash
-psql -h localhost -U postgres -d testtask -f queries.sql
-```
+   - Также через PGAdmin выполняем поочередно запросы из файла queries.sql
