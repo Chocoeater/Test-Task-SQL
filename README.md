@@ -52,3 +52,5 @@ psql -h localhost -U postgres -d testtask -f schema.sql
    - На windows возникают проблемы с кодировкой, поэтому пользуемся PGAdmin и через QueryTool копируем содержимое файла testdata.sql и запускаем.
 5. Выполняем запросы:
    - Также через PGAdmin выполняем поочередно запросы из файла queries.sql
+
+_Автор: Коурдаков Илья_
